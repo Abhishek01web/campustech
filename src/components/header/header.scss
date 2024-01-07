@@ -1,0 +1,93 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    cursor: pointer;
+    img {
+      height: 100%;
+      width: 100%;
+      @include xl {
+        width: 60%;
+      }
+    }
+    @include xl {
+      width: 40%;
+    }
+    @include md {
+      width: 80%;
+    }
+  }
+  @include md {
+    height: 8vh;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    @include xl {
+      width: 60%;
+      justify-content: flex-end;
+    }
+    @include md {
+      display: none;
+    }
+    ul {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-weight: 600;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navBtn {
+      cursor: pointer;
+      background: none;
+      border-radius: 1rem;
+      // padding: 1rem 0.5rem 1rem 0.5rem;
+      padding: 0.5rem;
+      font-weight: 600;
+      &:hover {
+        background: $cb;
+        color: $cw;
+      }
+    }
+  }
+  .mobileMenu {
+    @include md {
+      z-index: 9;
+      position: absolute;
+      top: 8vh;
+      left: 0;
+      width: 100%;
+      display: block;
+      padding: 2rem;
+      background: $cw;
+      ul {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .menuIcon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    @include md {
+      display: block;
+    }
+  }
+}

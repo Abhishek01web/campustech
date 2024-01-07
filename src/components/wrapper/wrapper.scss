@@ -1,0 +1,9 @@
+@import "../../css-config/mixins.scss";
+
+.wrapper {
+  width: 100%;
+  padding: 0rem 4rem 0 4rem;
+  @include md {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}

@@ -1,0 +1,77 @@
+@mixin sm {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mm {
+  @media only screen and (max-width: 820px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: 868px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (max-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin custom {
+  @media only screen and (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin heading {
+  color: #000;
+  font-size: 50px;
+  font-weight: 900;
+  #orange_text {
+    color: $cp;
+  }
+  @include xl {
+    font-size: 38px;
+  }
+  @include md {
+    font-size: 32px;
+  }
+}
+
+@mixin btn {
+  margin-top: 2rem;
+  font-size: 18px;
+  color: $cw;
+  border: none;
+  display: inline-flex;
+  padding: 14px 19px;
+  border-radius: 62px;
+  background: $cb;
+  cursor: pointer;
+  @include md {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  &:hover {
+    background: $cw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 12px;
+    color: $cb;
+  }
+}

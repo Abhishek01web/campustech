@@ -1,0 +1,100 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+@mixin h {
+  font-size: 18px;
+  border-bottom: 4px solid $cp;
+  width: 50%;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  @include md {
+    font-size: 16px;
+  }
+}
+
+.foot {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: $clg;
+  @include md {
+    padding-top: 2rem;
+  }
+}
+
+.footer {
+  height: 45vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 4rem;
+  @include md {
+    height: 100%;
+    gap: 2rem;
+  }
+  .footer_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6rem;
+    @include md {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .content_f {
+      ul {
+        list-style: none;
+        li {
+          font-size: 18px;
+          margin-bottom: 1rem;
+          @include md {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .content_s {
+      .content_s_h {
+        @include h;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 1px;
+      }
+    }
+    .content_t {
+      .content_t_h {
+        @include h;
+        width: 70%;
+        @include md {
+          width: 60%;
+        }
+      }
+      .content_t_social_icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+    }
+  }
+  .footer_footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include md {
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+    }
+    P {
+      font-size: 20px;
+      @include md {
+        font-size: 16px;
+      }
+    }
+  }
+}

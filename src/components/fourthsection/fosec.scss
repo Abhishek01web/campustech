@@ -1,0 +1,102 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+.fosec_top {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  @include md {
+    height: 100%;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+  .fosec_top_h {
+    @include heading;
+  }
+  .fsec_top_con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include md {
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .content {
+      @include md {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .content_num {
+        font-size: 72px;
+        font-weight: 900;
+        @include md {
+          font-size: 40px;
+        }
+      }
+      .content_para {
+        font-size: 22px;
+        font-weight: 700;
+        color: $cs;
+      }
+      &:nth-child(odd) {
+        color: $cv;
+      }
+      &:nth-child(even) {
+        color: $cb;
+      }
+    }
+  }
+}
+
+.fsec_slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5rem;
+  overflow-x: scroll;
+  img {
+    height: 30%;
+    width: 30%;
+  }
+  @include md {
+    margin: 5rem 0 1rem 0;
+    gap: 1rem;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.line {
+  height: 10vh;
+  position: relative;
+  margin-bottom: 5rem;
+  @include xl {
+    height: 6rem;
+    margin-bottom: 4rem;
+  }
+  @include md {
+    height: 1rem;
+    margin-bottom: 2rem;
+  }
+  .dline {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    width: 40%;
+    height: 1rem;
+    background: $cp;
+    @include md {
+      height: 0.5rem;
+    }
+  }
+}

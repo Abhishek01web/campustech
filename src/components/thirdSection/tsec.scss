@@ -1,0 +1,117 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+.tsec_style {
+  height: 80vh;
+  width: 100%;
+  background: $clg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include xl {
+    height: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+  @include md {
+    height: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    height: 200px;
+    width: 200px;
+    background: $cp;
+    border-radius: 50%;
+    @include xl {
+    left: -16%;
+    }
+    @include md {
+      top: -10%;
+      left: -10%;
+      bottom: 0;
+      height: 120px;
+      width: 120px;
+    }
+    @include mm {
+      top: -5%;
+      left: -20%;
+      height: 120px;
+      width: 120px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    height: 200px;
+    width: 200px;
+    background: $cb;
+    border-radius: 50%;
+    @include md {
+      top: 95%;
+      left: 98%;
+      bottom: 0;
+      height: 120px;
+      width: 120px;
+    }
+    @include mm {
+      top: 95%;
+      left: 90%;
+      bottom: 0;
+      height: 120px;
+      width: 120px;
+    }
+  }
+  .tsec {
+    height: calc(100% - 10%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    @include xl {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .tsec_first {
+      width: 40%;
+      @include xl {
+        width: 90%;
+      }
+      .tsec_first_heading {
+        @include heading;
+      }
+      .tsec_first_btn {
+        @include btn;
+      }
+    }
+    .tsec_second {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 6rem;
+      @include custom {
+        width: 80%;
+        gap: 4rem;
+      }
+      .container {
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        .container_para {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

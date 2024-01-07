@@ -1,0 +1,129 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+.sec_sec {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  @include md {
+    padding-top: 2rem;
+  }
+  .dline {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    border: none;
+    width: 40%;
+    height: 1rem;
+    background: $cv;
+    @include md {
+      height: 0.6rem;
+      top: 5%;
+    }
+  }
+}
+
+.secondSec {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  @include md {
+    height: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+  .secondSec_heading {
+    @include heading;
+  }
+  .secondSec_slider {
+    height: calc(100% - 40%);
+    width: 100%;
+    position: relative;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    @include md {
+      margin-top: 0;
+      height: 50%;
+      gap: 0;
+      left: 0;
+    }
+    .slide {
+      background: $cw;
+      border-bottom-left-radius: 5rem;
+      padding: 2rem;
+      margin: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      @include md {
+        padding: 1rem;
+        margin: 1rem;
+        left: 0;
+      }
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 12px;
+      }
+      .slide_heading {
+        color: $cp;
+        font-size: 25px;
+      }
+      .slide_para {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      .slide_btn {
+        background: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        font-weight: 600;
+        &:hover {
+          background: $cb;
+          color: $cw;
+        }
+      }
+    }
+  }
+}
+
+.custom-dot-list-style {
+  height: 20px;
+  width: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50% -50%);
+  border-radius: 2rem;
+  background: $cg;
+  @include md {
+    height: 14px;
+    width: 25%;
+    left: 40%;
+  }
+  .react-multi-carousel-dot button {
+    border: none;
+    outline: none;
+    background: $cg;
+    height: 100%;
+    width: 30px;
+    border-radius: 5rem;
+    @include md {
+      width: 20px;
+    }
+  }
+  .react-multi-carousel-dot--active {
+    background: $cb;
+    border-radius: 5rem;
+  }
+  .react-multi-carousel-dot--active button {
+    background: $cb;
+  }
+}

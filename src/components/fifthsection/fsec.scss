@@ -1,0 +1,56 @@
+@import "../../css-config/mixins.scss";
+@import "../../css-config/color.scss";
+
+.fsec_container {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  padding-top: 4rem;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include md {
+    align-items: flex-start;
+    height: 55vh;
+    padding-top: 0;
+  }
+  .fsec_right {
+    .girl {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top-left-radius: 100%;
+      @include md {
+        width: 100%;
+        bottom: 0;
+        top: 18%;
+      }
+    }
+  }
+}
+.fsec {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  @include md {
+    height: 100%;
+  }
+  .fsec_left {
+    width: 40%;
+    @include md {
+      width: 100%;
+    }
+    .fsec_left_h {
+      @include heading;
+    }
+    .fsec_left_btn {
+      @include btn;
+    }
+  }
+}
